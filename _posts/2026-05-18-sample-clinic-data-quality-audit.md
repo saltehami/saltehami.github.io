@@ -2,6 +2,10 @@
 title: "Sample: clinic data quality audit"
 description: A case-style post that uses charts to show where an operating report can and cannot be trusted.
 categories: case-study data-work healthcare-operations
+content_type: case
+maturity: tested
+domain: data-work
+audience: operators
 references:
   - label: Sample numbers for visual testing only
     url: /writing/

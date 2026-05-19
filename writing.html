@@ -1,22 +1,16 @@
 ---
 layout: page
-title: Writing
+title: Writing Archive
 permalink: /writing/
-kicker: Index
-description: Essays, notes, and case-shaped work on healthcare organizations, AI systems, data, and strategy.
+kicker: Archive
+description: A full archive of cases, concepts, reviews, notes, and sample formats.
 ---
-<div class="writing-list full-index">
+<p>
+The main paths through the site are <a href="/cases/">Cases</a>, <a href="/concepts/">Concepts</a>, and <a href="/reviews/">Reviews</a>. This archive keeps every post in one place.
+</p>
+
+<div class="content-card-grid full-index">
   {% for post in site.posts %}
-    <article class="writing-row">
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-      <div>
-        <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-        {% if post.description %}
-          <p>{{ post.description }}</p>
-        {% else %}
-          <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 220 }}</p>
-        {% endif %}
-      </div>
-    </article>
+    {% include post-card.html post=post %}
   {% endfor %}
 </div>

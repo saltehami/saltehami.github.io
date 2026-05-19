@@ -1,0 +1,61 @@
+---
+layout: page
+title: Concepts
+permalink: /concepts/
+kicker: Spine
+description: The operating-judgment concepts that organize the cases and reviews.
+---
+<p>
+The concepts are the repeatable parts. Cases show the particulars. Reviews test vendor and infrastructure claims. The spine below is how I sort the work.
+</p>
+
+<div class="concept-grid">
+  <article class="concept-card">
+    <span>01</span>
+    <h2>Workflow fit</h2>
+    <p>What job is the system actually entering, and what has to change around it for the tool to matter?</p>
+    <a href="/cases/#healthcare-ai-tools">Related AI buildout cases</a>
+  </article>
+  <article class="concept-card">
+    <span>02</span>
+    <h2>Data reliability</h2>
+    <p>Which fields are complete, current, and operationally meaningful enough to support a decision?</p>
+    <a href="/cases/#data-work">Related data-work cases</a>
+  </article>
+  <article class="concept-card">
+    <span>03</span>
+    <h2>Ownership and handoffs</h2>
+    <p>Who owns the work before, during, and after the software touches it?</p>
+    <a href="/cases/#clinic-ops">Related clinic-ops cases</a>
+  </article>
+  <article class="concept-card">
+    <span>04</span>
+    <h2>Review burden</h2>
+    <p>How much work moved from doing to checking, and is that review path real?</p>
+    <a href="/reviews/">Related reviews</a>
+  </article>
+  <article class="concept-card">
+    <span>05</span>
+    <h2>Source boundaries</h2>
+    <p>What does the system know, what is it guessing, and where should it refuse to sound complete?</p>
+    <a href="/cases/#ai-infra">Related AI-infra cases</a>
+  </article>
+  <article class="concept-card">
+    <span>06</span>
+    <h2>Evidence before dashboards</h2>
+    <p>Dashboards are only useful after the source, definition, and exception logic are clear enough to survive scrutiny.</p>
+    <a href="/cases/#strategy-diligence">Related strategy cases</a>
+  </article>
+</div>
+
+{% assign concept_posts = site.posts | where: "content_type", "concept" %}
+<section class="library-section">
+  <h2>Concept notes</h2>
+  <div class="content-card-grid">
+    {% for post in concept_posts %}
+      {% include post-card.html post=post %}
+    {% else %}
+      <p class="empty-state">Concept notes will collect here as the spine gets sharper.</p>
+    {% endfor %}
+  </div>
+</section>

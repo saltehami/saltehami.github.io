@@ -2,6 +2,10 @@
 title: "Sample: AI workflow buildout"
 description: A build-log style post for showing the before/after shape of an AI-assisted operational workflow.
 categories: build-log ai-systems operations
+content_type: case
+maturity: observed
+domain: healthcare-ai-tools
+audience: builders
 references:
   - label: Sample workflow diagram for visual testing only
     url: /writing/

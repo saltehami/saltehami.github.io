@@ -17,9 +17,10 @@ The local site runs at `http://localhost:4000`.
 
 ## Structure
 
-- `_posts/`: writing, notes, and case-shaped work.
-- `writing.html`: the public writing index.
-- `reading.md`, `tools.md`, `questions.md`, `about.md`: personal artifact pages.
+- `_posts/`: typed cases, concepts, reviews, notes, and sample formats.
+- `cases.html`, `concepts.html`, `reviews.html`: the public casebook spine.
+- `writing.html`: the full archive.
+- `reading.md`, `tools.md`, `questions.md`, `about.md`: supporting artifact pages.
 - `static/css/site.css`: the visual system.
 
 ## Credits

@@ -1,0 +1,49 @@
+---
+layout: page
+title: Reviews
+permalink: /reviews/
+kicker: Decision memos
+description: Healthcare AI tool and AI infrastructure reviews for people deciding what to buy, build, or trust.
+---
+<p>
+These are not casual rankings. Reviews here ask whether a healthcare AI tool or AI infrastructure claim survives contact with workflow, data, integration, and review reality.
+</p>
+
+<div class="review-framework">
+  <h2>Review framework</h2>
+  <ol>
+    <li>What workflow does it claim to improve?</li>
+    <li>What evidence would make the claim credible?</li>
+    <li>What integration, data, or review burden remains?</li>
+    <li>Who should use it?</li>
+    <li>Who should be skeptical?</li>
+  </ol>
+</div>
+
+{% assign reviews = site.posts | where: "content_type", "review" %}
+
+<section class="library-section">
+  <h2>Healthcare AI tools</h2>
+  <p>Ambient scribes, revenue-cycle tooling, clinical operations products, patient access, analytics, and workflow automation.</p>
+  <div class="content-card-grid">
+    {% assign tool_reviews = reviews | where: "review_kind", "healthcare-tool" %}
+    {% for post in tool_reviews %}
+      {% include post-card.html post=post %}
+    {% else %}
+      <p class="empty-state">No healthcare AI tool review published yet.</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="library-section">
+  <h2>AI infrastructure for healthcare</h2>
+  <p>Retrieval, evals, agents, observability, deployment patterns, and secure data workflows that sit beneath the product claim.</p>
+  <div class="content-card-grid">
+    {% assign infra_reviews = reviews | where: "review_kind", "ai-infra" %}
+    {% for post in infra_reviews %}
+      {% include post-card.html post=post %}
+    {% else %}
+      <p class="empty-state">No AI infrastructure review published yet.</p>
+    {% endfor %}
+  </div>
+</section>

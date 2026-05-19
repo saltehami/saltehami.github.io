@@ -6,7 +6,7 @@ kicker: Workbench
 description: Tools and workflows that are useful enough to write down.
 ---
 
-This page is for tools that survive repeated use. Not the full stack. Not a gear list. Just the things that keep proving useful.
+This page is for my own tools, checklists, workflows, and small artifacts. External healthcare AI products and infrastructure belong in [Reviews](/reviews/), where the question is whether a claim should be trusted.
 
 ## Writing
 

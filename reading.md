@@ -8,6 +8,8 @@ description: A working shelf of books, essays, papers, and references.
 
 This page is a working shelf, not a canon. It should change as the questions change.
 
+The shelf supports the casebook: healthcare organizations, AI systems, strategy, data work, and the operating judgment that connects them.
+
 ## Strategy and firms
 
 - Stratechery, especially the habit of separating business structure from surface narrative.

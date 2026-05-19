@@ -1,5 +1,5 @@
 title: Salik Tehami
-description: Writing on healthcare organizations, AI systems, data work, and strategy.
+description: A casebook for healthcare organizations, AI systems, data work, and operational judgment.
 author: Salik Tehami
 email:
 url: "https://saliktehami.com"
@@ -21,14 +21,16 @@ exclude:
   - "prng.py"
 
 nav:
-  - text: Writing
-    url: /writing/
-  - text: Reading
-    url: /reading/
+  - text: Cases
+    url: /cases/
+  - text: Concepts
+    url: /concepts/
+  - text: Reviews
+    url: /reviews/
   - text: Tools
     url: /tools/
-  - text: Questions
-    url: /questions/
+  - text: Reading
+    url: /reading/
   - text: About
     url: /about/
 

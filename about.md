@@ -3,12 +3,14 @@ layout: page
 title: About
 permalink: /about/
 kicker: Personal
-description: A little context for the writing and the work.
+description: A little context for the casebook and the work behind it.
 ---
 
-I'm Salik Tehami, MD/MBA. I'm using this site as a public notebook for the parts of healthcare and AI that get more interesting when they leave the slide deck. The center of gravity is healthcare organizations, data work, AI systems, operations, and strategy.
+I'm Salik Tehami, MD/MBA. I'm using this site as a public casebook for the parts of healthcare and AI that get more interesting when they leave the slide deck. The center of gravity is healthcare organizations, data work, AI systems, operations, and strategy.
 
-The writing will probably move between polished essays and rougher field notes. That's intentional. Some problems need a finished argument. Some are better kept closer to the point where the work is still unresolved.
+The writing moves between cases, concepts, reviews, and rougher notes. That's intentional. Some problems need a finished argument. Some are better kept closer to the point where the work is still unresolved.
+
+The main reader I have in mind is someone making a real decision: an operator deciding what to fix, a builder deciding what to ship, or an investor deciding whether a healthcare AI claim is credible.
 
 ## Work with me
 

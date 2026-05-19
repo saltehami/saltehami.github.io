@@ -1,0 +1,23 @@
+<article class="content-card">
+  <div class="card-meta">
+    <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%b %-d, %Y" }}</time>
+    {% if include.post.content_type %}
+      <span>{{ include.post.content_type | replace: "-", " " }}</span>
+    {% endif %}
+    {% if include.post.maturity %}
+      <span>{{ include.post.maturity | replace: "-", " " }}</span>
+    {% endif %}
+    {% if include.post.domain %}
+      <span>{{ include.post.domain | replace: "-", " " }}</span>
+    {% endif %}
+  </div>
+  <h3><a href="{{ include.post.url | prepend: site.baseurl }}">{{ include.post.title }}</a></h3>
+  {% if include.post.description %}
+    <p>{{ include.post.description }}</p>
+  {% else %}
+    <p>{{ include.post.excerpt | strip_html | strip_newlines | truncate: 180 }}</p>
+  {% endif %}
+  {% if include.post.verdict %}
+    <p class="card-verdict">{{ include.post.verdict }}</p>
+  {% endif %}
+</article>

@@ -8,6 +8,12 @@ layout: default
     {% if page.description %}
       <p class="page-description">{{ page.description }}</p>
     {% endif %}
+    <div class="post-meta-chips" aria-label="Article metadata">
+      {% if page.content_type %}<span>{{ page.content_type | replace: "-", " " }}</span>{% endif %}
+      {% if page.maturity %}<span>{{ page.maturity | replace: "-", " " }}</span>{% endif %}
+      {% if page.domain %}<span>{{ page.domain | replace: "-", " " }}</span>{% endif %}
+      {% if page.audience %}<span>{{ page.audience | replace: "-", " " }}</span>{% endif %}
+    </div>
   </header>
 
   <div class="site-frame article-grid">
@@ -16,6 +22,14 @@ layout: default
     </div>
 
     <aside class="article-aside" aria-label="Article notes">
+      {% if page.content_type == "review" %}
+        <div class="aside-block review-brief">
+          <h2>Decision Note</h2>
+          {% if page.verdict %}<p><strong>Verdict:</strong> {{ page.verdict }}</p>{% endif %}
+          {% if page.best_for %}<p><strong>Best for:</strong> {{ page.best_for }}</p>{% endif %}
+          {% if page.not_for %}<p><strong>Not for:</strong> {{ page.not_for }}</p>{% endif %}
+        </div>
+      {% endif %}
       {% if page.categories and page.categories.size > 0 %}
         <div class="aside-block">
           <h2>Filed Under</h2>

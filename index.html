@@ -1,77 +1,101 @@
 ---
 layout: default
 title: Home
-description: Writing on healthcare organizations, AI systems, data work, and strategy.
+description: A casebook for healthcare organizations, AI systems, data work, and operational judgment.
 ---
 <section class="home-hero site-frame">
   <div class="hero-copy">
-    <p class="eyebrow">Field notes on healthcare, AI, and strategy</p>
-    <h1>Making software useful inside healthcare organizations.</h1>
+    <p class="eyebrow">A casebook for healthcare organizations, AI systems, and operational judgment.</p>
+    <h1>I write about healthcare organizations, AI systems, data work, and the operational details that usually decide whether strategy survives contact with reality.</h1>
     <p class="hero-text">
-      Data quality, clinic workflows, AI buildouts, and the strategy that turns demos into systems.
+      Cases, concepts, reviews, and tools for people deciding what will actually work after the demo.
     </p>
   </div>
 
-  <div class="color-field" aria-hidden="true">
-    <span class="cream"></span>
-    <span class="lavender"></span>
-    <span class="ink"></span>
-    <span class="burgundy"></span>
-    <span class="teal"></span>
-    <span class="orange"></span>
-    <span class="coral"></span>
-    <span class="purple"></span>
-    <span class="pink"></span>
+  <div class="method-card" aria-label="Casebook method">
+    <p>Method</p>
+    <ol>
+      <li>Start with the workflow.</li>
+      <li>Trace the data boundary.</li>
+      <li>Test the claim against operations.</li>
+    </ol>
+    <div class="color-field small" aria-hidden="true">
+      <span class="cream"></span>
+      <span class="lavender"></span>
+      <span class="ink"></span>
+      <span class="burgundy"></span>
+      <span class="teal"></span>
+      <span class="orange"></span>
+      <span class="coral"></span>
+      <span class="purple"></span>
+      <span class="pink"></span>
+    </div>
+  </div>
+</section>
+
+<section class="site-frame section-block start-here">
+  <div class="section-heading">
+    <p class="eyebrow">Start Here</p>
+    <h2>How to read this site</h2>
+  </div>
+
+  <div class="entry-grid">
+    <a class="entry-card" href="/cases/">
+      <span>01</span>
+      <h3>Cases build pattern recognition.</h3>
+      <p>Generic by domain, specific by method: context, constraint, evidence, intervention, and what changed.</p>
+    </a>
+    <a class="entry-card" href="/concepts/">
+      <span>02</span>
+      <h3>Concepts organize the messy parts.</h3>
+      <p>Workflow fit, data reliability, ownership, review burden, source boundaries, and evidence before dashboards.</p>
+    </a>
+    <a class="entry-card" href="/reviews/">
+      <span>03</span>
+      <h3>Reviews test product claims.</h3>
+      <p>Healthcare AI tools and AI infrastructure, read as decision memos instead of casual rankings.</p>
+    </a>
+  </div>
+</section>
+
+<section class="site-frame split-section">
+  <div>
+    <p class="eyebrow">Casebook</p>
+    <h2>Domains for operational judgment</h2>
+    <p>
+      The useful unit is not the client name. It is the repeatable pattern: the claim, the workflow, the source boundary, the review path, and the part that broke under real conditions.
+    </p>
+  </div>
+  <div class="domain-grid">
+    <a href="/cases/#clinic-ops">Clinic operations</a>
+    <a href="/cases/#data-work">Data work</a>
+    <a href="/cases/#healthcare-ai-tools">AI buildouts</a>
+    <a href="/cases/#ai-infra">AI infrastructure</a>
+    <a href="/cases/#strategy-diligence">Strategy and diligence</a>
   </div>
 </section>
 
 <section class="site-frame section-block">
   <div class="section-heading">
     <p class="eyebrow">Latest</p>
-    <h2>Writing</h2>
+    <h2>Cases, reviews, and concepts</h2>
   </div>
 
-  <div class="writing-list">
-    {% for post in site.posts limit:5 %}
-      <article class="writing-row">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-        <div>
-          <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-          {% if post.description %}
-            <p>{{ post.description }}</p>
-          {% else %}
-            <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}</p>
-          {% endif %}
-        </div>
-      </article>
+  <div class="content-card-grid latest-grid">
+    {% for post in site.posts limit:6 %}
+      {% include post-card.html post=post %}
     {% endfor %}
   </div>
 </section>
 
-<section class="site-frame split-section">
-  <div>
-    <p class="eyebrow">Domains</p>
-    <h2>Case-shaped work</h2>
-    <p>
-      Case studies stay generic by domain. The useful pattern is the method: context, question, constraints, intervention, evidence, and what changed.
-    </p>
-  </div>
-  <div class="topic-stack">
-    <a href="/writing/">AI workflow buildouts</a>
-    <a href="/writing/">Healthcare data systems</a>
-    <a href="/writing/">Clinic operations</a>
-    <a href="/writing/">Strategy and diligence</a>
-  </div>
-</section>
-
-<section class="site-frame artifact-links">
+<section class="site-frame artifact-links compact-links">
   <a href="/reading/">
     <span>Reading</span>
     <small>Books, essays, papers, and references worth keeping close.</small>
   </a>
   <a href="/tools/">
     <span>Tools</span>
-    <small>Software, workflows, and small systems that survive repeated use.</small>
+    <small>Checklists, workflows, and small artifacts from the workbench.</small>
   </a>
   <a href="/questions/">
     <span>Questions</span>

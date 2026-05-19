@@ -2,6 +2,10 @@
 title: "Sample: investor diligence memo"
 description: A memo format for testing a company's AI workflow claims against source evidence and operational risk.
 categories: strategy diligence ai-systems
+content_type: case
+maturity: speculative
+domain: strategy-diligence
+audience: investors
 references:
   - label: Sample scoring rubric for visual testing only
     url: /writing/

@@ -1,0 +1,79 @@
+---
+layout: page
+title: Cases
+permalink: /cases/
+kicker: Library
+description: Case-shaped writing by domain, built for pattern recognition rather than client theater.
+---
+<p>
+Cases are generic by domain and specific by method. The point is to make the operating pattern visible: what was claimed, what the workflow required, what the source evidence supported, and what changed.
+</p>
+
+{% assign cases = site.posts | where: "content_type", "case" %}
+
+<div class="library-sections">
+  <section id="clinic-ops" class="library-section">
+    <h2>Clinic operations</h2>
+    <p>Scheduling, documentation, staffing, queues, compliance, exceptions, and the local habits that determine whether a system is usable.</p>
+    <div class="content-card-grid">
+      {% assign domain_posts = cases | where: "domain", "clinic-ops" %}
+      {% for post in domain_posts %}
+        {% include post-card.html post=post %}
+      {% else %}
+        <p class="empty-state">No clinic-ops case published yet.</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="data-work" class="library-section">
+    <h2>Data work</h2>
+    <p>Source coverage, metric definitions, exports, reconciliation, and the unglamorous work that decides whether a dashboard can be trusted.</p>
+    <div class="content-card-grid">
+      {% assign domain_posts = cases | where: "domain", "data-work" %}
+      {% for post in domain_posts %}
+        {% include post-card.html post=post %}
+      {% else %}
+        <p class="empty-state">No data-work case published yet.</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="healthcare-ai-tools" class="library-section">
+    <h2>AI buildouts</h2>
+    <p>AI systems inside healthcare workflows: what they prepare, what they own, what needs review, and where the demo stops being enough.</p>
+    <div class="content-card-grid">
+      {% assign domain_posts = cases | where: "domain", "healthcare-ai-tools" %}
+      {% for post in domain_posts %}
+        {% include post-card.html post=post %}
+      {% else %}
+        <p class="empty-state">No AI-buildout case published yet.</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="ai-infra" class="library-section">
+    <h2>AI infrastructure</h2>
+    <p>Retrieval, evals, observability, source boundaries, and infrastructure choices that matter when healthcare data is messy or sensitive.</p>
+    <div class="content-card-grid">
+      {% assign domain_posts = cases | where: "domain", "ai-infra" %}
+      {% for post in domain_posts %}
+        {% include post-card.html post=post %}
+      {% else %}
+        <p class="empty-state">No AI-infra case published yet.</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="strategy-diligence" class="library-section">
+    <h2>Strategy and diligence</h2>
+    <p>Build-vs-buy, vendor claims, operating leverage, adoption constraints, and the questions investors should ask before believing the workflow story.</p>
+    <div class="content-card-grid">
+      {% assign domain_posts = cases | where: "domain", "strategy-diligence" %}
+      {% for post in domain_posts %}
+        {% include post-card.html post=post %}
+      {% else %}
+        <p class="empty-state">No strategy/diligence case published yet.</p>
+      {% endfor %}
+    </div>
+  </section>
+</div>
