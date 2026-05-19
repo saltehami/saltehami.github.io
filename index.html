@@ -1,0 +1,80 @@
+---
+layout: default
+title: Home
+description: Writing on healthcare organizations, AI systems, data work, and strategy.
+---
+<section class="home-hero site-frame">
+  <div class="hero-copy">
+    <p class="eyebrow">Field notes on healthcare, AI, and strategy</p>
+    <h1>Making software useful inside healthcare organizations.</h1>
+    <p class="hero-text">
+      Data quality, clinic workflows, AI buildouts, and the strategy that turns demos into systems.
+    </p>
+  </div>
+
+  <div class="color-field" aria-hidden="true">
+    <span class="cream"></span>
+    <span class="lavender"></span>
+    <span class="ink"></span>
+    <span class="burgundy"></span>
+    <span class="teal"></span>
+    <span class="orange"></span>
+    <span class="coral"></span>
+    <span class="purple"></span>
+    <span class="pink"></span>
+  </div>
+</section>
+
+<section class="site-frame section-block">
+  <div class="section-heading">
+    <p class="eyebrow">Latest</p>
+    <h2>Writing</h2>
+  </div>
+
+  <div class="writing-list">
+    {% for post in site.posts limit:5 %}
+      <article class="writing-row">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <div>
+          <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+          {% if post.description %}
+            <p>{{ post.description }}</p>
+          {% else %}
+            <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}</p>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="site-frame split-section">
+  <div>
+    <p class="eyebrow">Domains</p>
+    <h2>Case-shaped work</h2>
+    <p>
+      Case studies stay generic by domain. The useful pattern is the method: context, question, constraints, intervention, evidence, and what changed.
+    </p>
+  </div>
+  <div class="topic-stack">
+    <a href="/writing/">AI workflow buildouts</a>
+    <a href="/writing/">Healthcare data systems</a>
+    <a href="/writing/">Clinic operations</a>
+    <a href="/writing/">Strategy and diligence</a>
+  </div>
+</section>
+
+<section class="site-frame artifact-links">
+  <a href="/reading/">
+    <span>Reading</span>
+    <small>Books, essays, papers, and references worth keeping close.</small>
+  </a>
+  <a href="/tools/">
+    <span>Tools</span>
+    <small>Software, workflows, and small systems that survive repeated use.</small>
+  </a>
+  <a href="/questions/">
+    <span>Questions</span>
+    <small>The unresolved things that shape what I write and build.</small>
+  </a>
+</section>

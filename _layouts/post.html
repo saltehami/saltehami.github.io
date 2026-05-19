@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<article class="article-shell">
+  <header class="article-header site-frame">
+    <p class="eyebrow">{{ page.date | date: "%B %-d, %Y" }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="page-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="site-frame article-grid">
+    <div class="article-content">
+      {{ content }}
+    </div>
+
+    <aside class="article-aside" aria-label="Article notes">
+      {% if page.categories and page.categories.size > 0 %}
+        <div class="aside-block">
+          <h2>Filed Under</h2>
+          <p>{{ page.categories | join: ", " }}</p>
+        </div>
+      {% endif %}
+      {% if page.references %}
+        <div class="aside-block">
+          <h2>References</h2>
+          <ol>
+            {% for reference in page.references %}
+              <li><a href="{{ reference.url }}">{{ reference.label }}</a></li>
+            {% endfor %}
+          </ol>
+        </div>
+      {% endif %}
+    </aside>
+  </div>
+</article>

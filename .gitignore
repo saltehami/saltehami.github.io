@@ -1,0 +1,12 @@
+_site/
+.sass-cache/
+.jekyll-metadata
+.bundle
+vendor/
+_reference/
+.playwright-mcp/
+
+# Editor backups
+*~
+
+.ipynb_checkpoints

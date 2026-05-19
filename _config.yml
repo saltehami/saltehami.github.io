@@ -1,0 +1,47 @@
+title: Salik Tehami
+description: Writing on healthcare organizations, AI systems, data work, and strategy.
+author: Salik Tehami
+email:
+url: "https://saliktehami.com"
+canonical_url: "https://saliktehami.com"
+
+exclude:
+  - ".rvmrc"
+  - ".rbenv-version"
+  - "README.md"
+  - "Rakefile"
+  - "LICENSE"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "vendor"
+  - ".bundle"
+  - "_reference"
+  - "docker-compose.yaml"
+  - "mdconvert.sh"
+  - "prng.py"
+
+nav:
+  - text: Writing
+    url: /writing/
+  - text: Reading
+    url: /reading/
+  - text: Tools
+    url: /tools/
+  - text: Questions
+    url: /questions/
+  - text: About
+    url: /about/
+
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+
+permalink: /writing/:year/:month/:day/:title/
+excerpt_separator: <!--more-->
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
