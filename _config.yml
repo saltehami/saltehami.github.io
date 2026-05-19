@@ -21,6 +21,8 @@ exclude:
   - "prng.py"
 
 nav:
+  - text: Start Here
+    url: /#start-here
   - text: Cases
     url: /cases/
   - text: Concepts
