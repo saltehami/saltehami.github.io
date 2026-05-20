@@ -30,7 +30,11 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--paper);
+  background:
+    linear-gradient(rgba(24, 24, 23, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 24, 23, 0.055) 1px, transparent 1px),
+    var(--paper);
+  background-size: 40px 40px;
   color: var(--ink);
 }
 
@@ -75,13 +79,14 @@ a:focus-visible {
 }
 
 .site-header {
-  background: rgba(246, 242, 223, 0.92);
+  background: rgba(246, 242, 223, 0.76);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: clamp(1rem, 3vw, 2.5rem);
   padding: 1.05rem 0;
   border-bottom: 1px solid var(--line);
 }
@@ -113,13 +118,13 @@ a:focus-visible {
 .mark-blocks span:nth-child(4) { background: var(--teal); }
 
 .primary-nav {
+  flex: 1;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 0.35rem clamp(1rem, 3vw, 2rem);
-  padding: 0.95rem 0;
-  border-bottom: 1px solid var(--line);
+  padding: 0;
   font-size: 0.95rem;
 }
 
@@ -1038,9 +1043,11 @@ h1 {
   .header-inner {
     align-items: flex-start;
     display: grid;
+    gap: 0.85rem;
   }
 
   .primary-nav {
+    width: 100%;
     justify-content: flex-start;
   }
 
